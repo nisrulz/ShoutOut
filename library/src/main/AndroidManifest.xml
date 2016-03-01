@@ -1,11 +1,5 @@
-<manifest package="github.nisrulz.shoutout"
-          xmlns:android="http://schemas.android.com/apk/res/android">
+<manifest package="github.nisrulz.shoutout">
 
-    <application
-        android:allowBackup="true"
-        android:supportsRtl="true"
-        >
-
-    </application>
+    <application></application>
 
 </manifest>
