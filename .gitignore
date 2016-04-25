@@ -64,7 +64,7 @@ release.properties
 gradle-app.setting
 
 # Properties
-gradle.properties
+*/gradle.properties
 
 # Mobile Tools for Java (J2ME)
 .mtj.tmp/
