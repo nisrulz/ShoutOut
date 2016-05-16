@@ -1,4 +1,4 @@
-# ShoutOut    [![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.github.nisrulz/shoutout/badge.svg)](https://maven-badges.herokuapp.com/maven-central/com.github.nisrulz/shoutout)
+# ShoutOut    [![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.github.nisrulz/shoutout/badge.svg)](https://maven-badges.herokuapp.com/maven-central/com.github.nisrulz/shoutout) [![Twitter](https://img.shields.io/badge/Twitter-@nisrulz-blue.svg?style=flat)](http://twitter.com/nisrulz)
 
 Android wrapper for logging information.
 
