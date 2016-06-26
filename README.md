@@ -19,7 +19,7 @@ Android wrapper for logging information.
 ShoutOut is available
 - via **MavenCentral**, so getting it as simple as adding it as a dependency
 ```gradle
-compile 'com.github.nisrulz:shoutout:1.0.1'
+compile 'com.github.nisrulz:shoutout:1.0.2'
 ```
 
 OR
@@ -37,7 +37,7 @@ OR
   ```
   + **Step 2 :** Add the dependency
   ```gradle
-  compile 'com.github.nisrulz:ShoutOut:1.0.1'
+  compile 'com.github.nisrulz:ShoutOut:1.0.2'
   ```
 
 #Usage
