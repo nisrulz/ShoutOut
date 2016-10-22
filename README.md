@@ -2,7 +2,7 @@
 
 
 ### Specs
-[![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.github.nisrulz/shoutout/badge.svg)](https://maven-badges.herokuapp.com/maven-central/com.github.nisrulz/shoutout) [![](https://jitpack.io/v/nisrulz/ShoutOut.svg)](https://jitpack.io/#nisrulz/ShoutOut) [![API](https://img.shields.io/badge/API-9%2B-orange.svg?style=flat)](https://android-arsenal.com/api?level=9)
+[ ![Download](https://api.bintray.com/packages/nisrulz/maven/com.github.nisrulz%3Ashoutout/images/download.svg) ](https://bintray.com/nisrulz/maven/com.github.nisrulz%3Ashoutout/_latestVersion) [![API](https://img.shields.io/badge/API-9%2B-orange.svg?style=flat)](https://android-arsenal.com/api?level=9)
 
 ### Show some :heart:
 [![GitHub stars](https://img.shields.io/github/stars/nisrulz/ShoutOut.svg?style=social&label=Star)](https://github.com/nisrulz/ShoutOut) [![GitHub forks](https://img.shields.io/github/forks/nisrulz/ShoutOut.svg?style=social&label=Fork)](https://github.com/nisrulz/ShoutOut/fork) [![GitHub watchers](https://img.shields.io/github/watchers/nisrulz/ShoutOut.svg?style=social&label=Watch)](https://github.com/nisrulz/ShoutOut) [![GitHub followers](https://img.shields.io/github/followers/nisrulz.svg?style=social&label=Follow)](https://github.com/nisrulz/ShoutOut)  
@@ -13,32 +13,12 @@ Android wrapper for logging information.
 
 > I used to copy-paste this logger class in all my projects so decided to use it like a library. Star it if you find it useful.
 
-
-
-#Integration
-ShoutOut is available
-- via **MavenCentral**, so getting it as simple as adding it as a dependency
+# Including in your project
+ShoutOut is available in the Jcenter, so getting it as simple as adding it as a dependency
 ```gradle
-compile 'com.github.nisrulz:shoutout:1.0.2'
+compile 'com.github.nisrulz:shoutout:{latest version}'
 ```
-
-OR
-
-- via **Jitpack**
-
-  + **Step 1 :** Add it in your root build.gradle at the end of repositories:
-  ```gradle
-  allprojects {
-  		repositories {
-  			...
-  			maven { url "https://jitpack.io" }
-  		}
-  	}
-  ```
-  + **Step 2 :** Add the dependency
-  ```gradle
-  compile 'com.github.nisrulz:ShoutOut:1.0.2'
-  ```
+where `{latest version}` corresponds to published version in [ ![Download](https://api.bintray.com/packages/nisrulz/maven/com.github.nisrulz%3Ashoutout/images/download.svg) ](https://bintray.com/nisrulz/maven/com.github.nisrulz%3Ashoutout/_latestVersion)
 
 #Usage
 + First init shoutout, probably in your application class
