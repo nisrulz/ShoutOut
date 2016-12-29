@@ -1,8 +1,10 @@
 # ShoutOut    
 
-
 ### Specs
 [ ![Download](https://api.bintray.com/packages/nisrulz/maven/com.github.nisrulz%3Ashoutout/images/download.svg) ](https://bintray.com/nisrulz/maven/com.github.nisrulz%3Ashoutout/_latestVersion) [![API](https://img.shields.io/badge/API-9%2B-orange.svg?style=flat)](https://android-arsenal.com/api?level=9)
+
+### Badges/Featured In
+[![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-ShoutOut-brightgreen.svg?style=flat)](https://android-arsenal.com/details/1/4955#)
 
 ### Show some :heart:
 [![GitHub stars](https://img.shields.io/github/stars/nisrulz/ShoutOut.svg?style=social&label=Star)](https://github.com/nisrulz/ShoutOut) [![GitHub forks](https://img.shields.io/github/forks/nisrulz/ShoutOut.svg?style=social&label=Fork)](https://github.com/nisrulz/ShoutOut/fork) [![GitHub watchers](https://img.shields.io/github/watchers/nisrulz/ShoutOut.svg?style=social&label=Watch)](https://github.com/nisrulz/ShoutOut) [![GitHub followers](https://img.shields.io/github/followers/nisrulz.svg?style=social&label=Follow)](https://github.com/nisrulz/ShoutOut)  
@@ -10,8 +12,6 @@
 
 
 Android wrapper for logging information.
-
-> I used to copy-paste this logger class in all my projects so decided to use it like a library. Star it if you find it useful.
 
 # Including in your project
 ShoutOut is available in the Jcenter, so getting it as simple as adding it as a dependency
@@ -50,6 +50,10 @@ I welcome and encourage all pull requests. It usually will take me within 24-48 
 
 ### Created & Maintained By
 [Nishant Srivastava](https://github.com/nisrulz) ([@nisrulz](https://www.twitter.com/nisrulz))
+
+> If you found this library helpful or you learned something from the source code and want to thank me, consider buying me a cup of :coffee:
+>
+> <a href='https://ko-fi.com/A443EQ6' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://az743702.vo.msecnd.net/cdn/kofi1.png?v=f' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a>
 
 
 License
