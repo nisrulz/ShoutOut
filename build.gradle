@@ -41,3 +41,19 @@ allprojects {
 task clean(type: Delete) {
   delete rootProject.buildDir
 }
+
+ext {
+  //Other
+  supportLibVersion = '25.1.0'
+
+  // Library Info
+  libVersionCode = 4
+  libVersionName = '1.1.0'
+  libPomUrl = 'https://github.com/nisrulz/ShoutOut'
+  libGithubRepo = 'nisrulz/ShoutOut'
+
+
+  libModuleName = 'shoutout'
+  libModuleDesc = 'Android library to log information in android'
+  libBintrayName = 'com.github.nisrulz:shoutout'
+}
