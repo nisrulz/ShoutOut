@@ -18,62 +18,38 @@ package github.nisrulz.projectshoutout;
 
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
-
 import github.nisrulz.shoutout.ShoutOut;
 
 public class MainActivity extends AppCompatActivity {
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
+  private ShoutOut shoutOut;
 
-        // Init the ShoutOut Lib
-        ShoutOut.init(getClass().getSimpleName(), true);
+  @Override
+  protected void onCreate(Bundle savedInstanceState) {
+    super.onCreate(savedInstanceState);
+    setContentView(R.layout.activity_main);
+    Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+    setSupportActionBar(toolbar);
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+    shoutOut = ShoutOut.withTag(">> ShoutOut", true);
 
-                // Debug Logs
-                ShoutOut.log("This is Debug information here in LOGCAT");
-                // Error Logs
-                ShoutOut.log("This is Error information here in LOGCAT",
-                        new RuntimeException("Hello! I am Runtime exception"));
-            }
-        });
-    }
+    FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+    fab.setOnClickListener(new View.OnClickListener() {
+      @Override
+      public void onClick(View view) {
+        // Debug Logs
+        shoutOut.log("This is Debug information here in LOGCAT");
+        // Error Logs
+        shoutOut.withCause(new RuntimeException("Hello! I am Runtime exception"));
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
-
-        return super.onOptionsItemSelected(item);
-    }
+        // Chained for message with exception stacktrace
+        shoutOut.log(
+            "This is Debug information here that is chained for adding a message to exception stacktrace in LOGCAT")
+            .withCause(new RuntimeException("Hello! I am Runtime exception"));
+      }
+    });
+  }
 }

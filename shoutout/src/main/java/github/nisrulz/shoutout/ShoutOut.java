@@ -19,42 +19,36 @@ package github.nisrulz.shoutout;
 import android.util.Log;
 
 public class ShoutOut {
-    private static boolean DEBUGGABLE = false;
-    private static String LOGTAG = "ShoutOut";
+  private final String TAG;
+  private final int priority;
+  private static boolean debug;
 
-    private static String sideLimiterLeft = "-------------------------------------- ShoutOut : ";
-    private static String sideLimiterRight = "--------------------------------------\n\n\n";
-    private static String label = "DEBUG Log ";
+  private ShoutOut(String TAG, int priority) {
+    this.TAG = TAG;
+    this.priority = priority;
+  }
 
-    public static void init(String newLOGTAG, boolean debuggable) {
-        LOGTAG = newLOGTAG;
-        DEBUGGABLE = debuggable;
+  public static ShoutOut withTag(boolean debuggable, String tag) {
+    debug = debuggable;
+    return new ShoutOut(tag, Log.DEBUG);
+  }
+
+  public static ShoutOut withTagAndPriority(boolean debuggable, String tag, int priority) {
+    debug = debuggable;
+    return new ShoutOut(tag, priority);
+  }
+
+  public ShoutOut log(String message) {
+    if (debug) {
+      Log.println(priority, TAG, message);
     }
 
-    public static void log(String logdata) {
-        if (DEBUGGABLE) {
-            label = "Debug Log ";
-            Log.d(LOGTAG, sideLimiterLeft + label + sideLimiterRight);
-            Log.d(LOGTAG, logdata);
-        }
+    return this;
+  }
+
+  public void withCause(Exception cause) {
+    if (debug) {
+      Log.println(priority, TAG, Log.getStackTraceString(cause));
     }
-
-    public static void log(String logdata, Throwable ex) {
-        if (DEBUGGABLE) {
-            label = "Error Log ";
-            Log.e(LOGTAG, sideLimiterLeft + label + sideLimiterRight);
-
-            Log.e(LOGTAG, logdata);
-
-            label = "StackTrace START ";
-            Log.e(LOGTAG, sideLimiterLeft + label + sideLimiterRight);
-
-            ex.printStackTrace();
-
-            label = "StackTrace END ";
-            Log.e(LOGTAG, sideLimiterLeft + label + sideLimiterRight);
-        }
-
-    }
-
+  }
 }
