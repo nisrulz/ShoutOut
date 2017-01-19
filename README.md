@@ -21,22 +21,32 @@ compile 'com.github.nisrulz:shoutout:{latest version}'
 where `{latest version}` corresponds to published version in [ ![Download](https://api.bintray.com/packages/nisrulz/maven/com.github.nisrulz%3Ashoutout/images/download.svg) ](https://bintray.com/nisrulz/maven/com.github.nisrulz%3Ashoutout/_latestVersion)
 
 #Usage
-+ First init shoutout, probably in your application class
++ First create and init shoutout;
 ```java
+    ShoutOut shoutOut;
     // Init the ShoutOut Lib
-    ShoutOut.init(getClass().getSimpleName(), true);
-```
+    shoutOut = ShoutOut.withTag(debuggable, TAG);
 
-where the params are _**TAG**_ and _**debuggable**_ flag
+    // or you can also init as below to specify a priority
+    shoutOut = ShoutOut.withTagAndPriority(debuggable,TAG, priority);
+```
+where `priority` can be `Log.DEBUG`, `Log.ERROR`, `Log.ASSERT`, `Log.WTF` or `Log.INFO`
 
 + Now log data as below
 ```java
     // Debug Logs
-    ShoutOut.log("This is Debug information here in LOGCAT");
+    shoutOut.log("This is Debug information here in LOGCAT");
 
     // Error Logs
-    ShoutOut.log("This is Error information here in LOGCAT",exception));
+    shoutOut.withCause(new RuntimeException("Hello! I am Runtime exception"));
 ```
+
++ You can chain an extra debug log to exception log
+```java
+  shoutOut.log("This is Debug information here that is chained for adding a message to exception stacktrace in LOGCAT")
+          .withCause(new RuntimeException("Hello! I am Runtime exception"));
+
+``` 
 
 
 # Pull Requests
