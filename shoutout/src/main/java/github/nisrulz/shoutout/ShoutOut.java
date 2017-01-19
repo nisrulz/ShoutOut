@@ -23,6 +23,8 @@ public class ShoutOut {
   private final int priority;
   private static boolean debug;
 
+  private static ShoutOut shoutOut;
+
   private ShoutOut(String TAG, int priority) {
     this.TAG = TAG;
     this.priority = priority;
@@ -30,12 +32,18 @@ public class ShoutOut {
 
   public static ShoutOut withTag(boolean debuggable, String tag) {
     debug = debuggable;
-    return new ShoutOut(tag, Log.DEBUG);
+    if (shoutOut == null) {
+      shoutOut = new ShoutOut(tag, Log.INFO);
+    }
+    return shoutOut;
   }
 
   public static ShoutOut withTagAndPriority(boolean debuggable, String tag, int priority) {
     debug = debuggable;
-    return new ShoutOut(tag, priority);
+    if (shoutOut == null) {
+      shoutOut = new ShoutOut(tag, priority);
+    }
+    return shoutOut;
   }
 
   public ShoutOut log(String message) {
@@ -48,7 +56,7 @@ public class ShoutOut {
 
   public void withCause(Exception cause) {
     if (debug) {
-      Log.println(priority, TAG, Log.getStackTraceString(cause));
+      Log.println(Log.ERROR, TAG, Log.getStackTraceString(cause));
     }
   }
 }
