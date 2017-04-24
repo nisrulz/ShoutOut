@@ -19,11 +19,10 @@ package github.nisrulz.shoutout;
 import android.util.Log;
 
 public class ShoutOut {
+  private static boolean debug;
+  private static ShoutOut shoutOut;
   private final String TAG;
   private final int priority;
-  private static boolean debug;
-
-  private static ShoutOut shoutOut;
 
   private ShoutOut(String TAG, int priority) {
     this.TAG = TAG;

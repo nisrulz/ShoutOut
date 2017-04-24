@@ -15,5 +15,5 @@
   -->
 
 <resources>
-    <string name="app_name">ShoutOut</string>
+  <string name="app_name">ShoutOut</string>
 </resources>
