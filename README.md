@@ -68,32 +68,30 @@ where `{latest version}` corresponds to published version in [ ![Download](https
 
 # Usage
 + First create and init shoutout;
-```java
+    ```java
     ShoutOut shoutOut;
     // Init the ShoutOut Lib
     shoutOut = ShoutOut.withTag(debuggable, TAG);
 
     // or you can also init as below to specify a priority
     shoutOut = ShoutOut.withTagAndPriority(debuggable,TAG, priority);
-```
-where `priority` can be `Log.DEBUG`, `Log.ERROR`, `Log.ASSERT`, `Log.WTF` or `Log.INFO`
+    ```
+    where `priority` can be `Log.DEBUG`, `Log.ERROR`, `Log.ASSERT`, `Log.WTF` or `Log.INFO`
 
 + Now log data as below
-```java
+    ```java
     // Debug Logs
     shoutOut.log("This is Debug information here in LOGCAT");
 
     // Error Logs
     shoutOut.withCause(new RuntimeException("Hello! I am Runtime exception"));
-```
+    ```
 
 + You can chain an extra debug log to exception log
-```java
-  shoutOut.log("This is Debug information here that is chained for adding a message to exception stacktrace in LOGCAT")
-          .withCause(new RuntimeException("Hello! I am Runtime exception"));
-
-``` 
-
+    ```java
+    shoutOut.log("This is Debug information here that is chained for adding a message to exception stacktrace in LOGCAT")
+            .withCause(new RuntimeException("Hello! I am Runtime exception"));
+    ```
 
 # Pull Requests
 I welcome and encourage all pull requests. It usually will take me within 24-48 hours to respond to any issue or request. Here are some basic rules to follow to ensure timely addition of your request:
