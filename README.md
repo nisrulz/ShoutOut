@@ -102,12 +102,15 @@ I welcome and encourage all pull requests. It usually will take me within 24-48 
   5. Check for existing [issues](https://github.com/nisrulz/ShoutOut/issues) first, before filing an issue.  
   6. Have fun!
 
-### Created & Maintained By
+### Created & Maintained By :sunglasses:
 [Nishant Srivastava](https://github.com/nisrulz/nisrulz.github.io) ([@nisrulz](https://www.twitter.com/nisrulz))
 
 > If you appreciate my work, please consider buying me a cup of :coffee:
 >  + [PayPal](https://www.paypal.me/nisrulz/5)
 >  + Bitcoin Address: 13PjuJcfVW2Ad81fawqwLtku4bZLv1AxCL
+
+### Contributors :metal:
+Checkout the [list of awesome contributors](https://github.com/nisrulz/ShoutOut/graphs/contributors) of this project
 
 License
 =======
