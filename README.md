@@ -57,8 +57,7 @@
   </a>
 </div>
 <br/>
-
----
+<br/>
 
 # Including in your project
 ShoutOut is available in the Jcenter, so getting it as simple as adding it as a dependency
@@ -67,7 +66,7 @@ compile 'com.github.nisrulz:shoutout:{latest version}'
 ```
 where `{latest version}` corresponds to published version in [ ![Download](https://api.bintray.com/packages/nisrulz/maven/com.github.nisrulz%3Ashoutout/images/download.svg) ](https://bintray.com/nisrulz/maven/com.github.nisrulz%3Ashoutout/_latestVersion)
 
-#Usage
+# Usage
 + First create and init shoutout;
 ```java
     ShoutOut shoutOut;
@@ -108,12 +107,9 @@ I welcome and encourage all pull requests. It usually will take me within 24-48 
 ### Created & Maintained By
 [Nishant Srivastava](https://github.com/nisrulz/nisrulz.github.io) ([@nisrulz](https://www.twitter.com/nisrulz))
 
-> If you found this library helpful or you learned something from the source code and want to thank me, consider buying me a cup of :coffee:
+> If you appreciate my work, please consider buying me a cup of :coffee:
 >  + [PayPal](https://www.paypal.me/nisrulz/5)
 >  + Bitcoin Address: 13PjuJcfVW2Ad81fawqwLtku4bZLv1AxCL
-
-
-<img src="http://forthebadge.com/images/badges/built-for-android.svg" />
 
 License
 =======
@@ -131,3 +127,5 @@ License
     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
     See the License for the specific language governing permissions and
     limitations under the License.
+
+<img src="http://forthebadge.com/images/badges/built-for-android.svg" />
