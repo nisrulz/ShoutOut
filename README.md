@@ -15,6 +15,10 @@
     <a href="https://android-arsenal.com/api?level=9">
         <img src="https://img.shields.io/badge/API-9%2B-orange.svg?style=flat"/>
     </a>
+    <!-- Circle CI -->
+    <a>
+        <img src="https://circleci.com/gh/nisrulz/ShoutOut.svg?style=svg"/>
+    </a>
     <!-- Android Arsenal -->
     <a href="https://android-arsenal.com/details/1/4955#">
         <img src="https://img.shields.io/badge/Android%20Arsenal-ShoutOut-brightgreen.svg?style=flat"/>
