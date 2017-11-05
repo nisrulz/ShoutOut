@@ -19,43 +19,47 @@ package github.nisrulz.shoutout;
 import android.util.Log;
 
 public class ShoutOut {
-  private static boolean debug;
-  private static ShoutOut shoutOut;
-  private final String TAG;
-  private final int priority;
 
-  private ShoutOut(String TAG, int priority) {
-    this.TAG = TAG;
-    this.priority = priority;
-  }
+    private static boolean debug;
 
-  public static ShoutOut withTag(boolean debuggable, String tag) {
-    debug = debuggable;
-    if (shoutOut == null) {
-      shoutOut = new ShoutOut(tag, Log.INFO);
-    }
-    return shoutOut;
-  }
+    private static ShoutOut shoutOut;
 
-  public static ShoutOut withTagAndPriority(boolean debuggable, String tag, int priority) {
-    debug = debuggable;
-    if (shoutOut == null) {
-      shoutOut = new ShoutOut(tag, priority);
-    }
-    return shoutOut;
-  }
+    private final String TAG;
 
-  public ShoutOut log(String message) {
-    if (debug) {
-      Log.println(priority, TAG, message);
+    private final int priority;
+
+    public static ShoutOut withTag(boolean debuggable, String tag) {
+        debug = debuggable;
+        if (shoutOut == null) {
+            shoutOut = new ShoutOut(tag, Log.INFO);
+        }
+        return shoutOut;
     }
 
-    return this;
-  }
-
-  public void withCause(Exception cause) {
-    if (debug) {
-      Log.println(Log.ERROR, TAG, Log.getStackTraceString(cause));
+    public static ShoutOut withTagAndPriority(boolean debuggable, String tag, int priority) {
+        debug = debuggable;
+        if (shoutOut == null) {
+            shoutOut = new ShoutOut(tag, priority);
+        }
+        return shoutOut;
     }
-  }
+
+    private ShoutOut(String TAG, int priority) {
+        this.TAG = TAG;
+        this.priority = priority;
+    }
+
+    public ShoutOut log(String message) {
+        if (debug) {
+            Log.println(priority, TAG, message);
+        }
+
+        return this;
+    }
+
+    public void withCause(Exception cause) {
+        if (debug) {
+            Log.println(Log.ERROR, TAG, Log.getStackTraceString(cause));
+        }
+    }
 }
