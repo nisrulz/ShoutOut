@@ -16,7 +16,7 @@
         <img src="https://img.shields.io/badge/API-9%2B-orange.svg?style=flat"/>
     </a>
     <!-- Circle CI -->
-    <a>
+    <a href="https://circleci.com/gh/nisrulz/ShoutOut/tree/master">
         <img src="https://circleci.com/gh/nisrulz/ShoutOut.svg?style=svg"/>
     </a>
     <!-- Android Arsenal -->

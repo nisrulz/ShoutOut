@@ -49,7 +49,7 @@ ext {
   targetSdkVersion = 27
   minSdkVersion = 14
   compileSdkVersion = targetSdkVersion
-  buildToolsVersion = '27.0.0'
+  buildToolsVersion = '27.0.1'
   supportLibVersion = '27.0.0'
 
   // Library Info
