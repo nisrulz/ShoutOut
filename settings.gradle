@@ -14,4 +14,6 @@
  * limitations under the License.
  */
 
-include ':sample', ':shoutout'
+rootProject.name = 'ShoutoutProject'
+include ':sample'
+include ':shoutout'

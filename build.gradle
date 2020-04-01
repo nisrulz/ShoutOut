@@ -15,50 +15,25 @@
  */
 
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
-
 buildscript {
     repositories {
         google()
         jcenter()
     }
+
     dependencies {
-        classpath 'com.android.tools.build:gradle:3.3.0-beta02'
+        classpath Plugins.android
+
+        // Publish to Jcenter/Bintray
+        classpath Plugins.bintray
+        classpath Plugins.androidMaven
+
+        // Kotlin Plugin
+        classpath Plugins.kotlin
 
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
-
-        // Required plugins added to classpath to facilitate pushing to Jcenter/Bintray
-        classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.8.4'
-        classpath 'com.github.dcendents:android-maven-gradle-plugin:2.1'
     }
 }
 
-allprojects {
-    repositories {
-        google()
-        jcenter()
-    }
-}
-
-task clean(type: Delete) {
-    delete rootProject.buildDir
-}
-
-ext {
-    //Other
-   targetSdkVersion = 28
-    minSdkVersion = 14
-    compileSdkVersion = targetSdkVersion
-    
-
-    // Library Info
-    libVersionCode = 8
-    libVersionName = '1.1.4'
-    libPomUrl = 'https://github.com/nisrulz/ShoutOut'
-    libGithubRepo = 'nisrulz/ShoutOut'
-
-
-    libModuleName = 'shoutout'
-    libModuleDesc = 'Android library to log information in android'
-    libBintrayName = 'com.github.nisrulz:shoutout'
-}
+apply from: "$rootProject.projectDir/configs/setupPluginsAndConfig.gradle"

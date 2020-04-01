@@ -14,31 +14,25 @@
  * limitations under the License.
  */
 
-apply plugin: 'com.android.application'
-
 android {
-    compileSdkVersion rootProject.ext.compileSdkVersion
-    
-
     defaultConfig {
-        minSdkVersion rootProject.ext.minSdkVersion
-        targetSdkVersion rootProject.ext.targetSdkVersion
         applicationId "github.nisrulz.projectshoutout"
-        versionCode 1
-        versionName "1.0"
-    }
-    buildTypes {
-        release {
-            minifyEnabled true
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-        }
+
+        versionCode Versions.appCode
+        versionName Versions.appName
     }
 }
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    testImplementation 'junit:junit:4.12'
-    implementation "com.android.support:appcompat-v7:${rootProject.ext.supportLibVersion}"
-    implementation "com.android.support:design:${rootProject.ext.supportLibVersion}"
+
+    // Kotlin
+    implementation Dependencies.kotlinStdLib
+
+    // AndroidX
+    implementation Dependencies.andxAppCompat
+    implementation Dependencies.material
+
+    // implementation 'com.github.nisrulz:shoutout:1.4.4'
     implementation project(':shoutout')
 }
