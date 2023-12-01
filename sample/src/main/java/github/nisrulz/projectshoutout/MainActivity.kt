@@ -38,7 +38,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun setupUI(binding: ActivityMainBinding) {
         with(binding) {
-            fab.setOnClickListener {
+            btn.setOnClickListener {
                 Toast.makeText(
                     this@MainActivity,
                     "Check your Logcat for logs",
