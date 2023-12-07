@@ -82,3 +82,6 @@ hs_err_pid*
 .DS_Store
 /captures
 **/*.iml
+
+site
+docs/api/

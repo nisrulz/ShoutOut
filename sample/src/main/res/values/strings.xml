@@ -16,4 +16,5 @@
 
 <resources>
     <string name="app_name">ShoutOut</string>
+    <string name="trigger_log">Trigger Log</string>
 </resources>

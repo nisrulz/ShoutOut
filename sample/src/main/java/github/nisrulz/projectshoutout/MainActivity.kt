@@ -18,36 +18,50 @@ package github.nisrulz.projectshoutout
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import androidx.appcompat.widget.Toolbar
+import github.nisrulz.projectshoutout.databinding.ActivityMainBinding
 import github.nisrulz.shoutout.ShoutOut
-import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
-    private val shoutOut: ShoutOut = ShoutOut.withTag(true, ">> ShoutOut")
+    private lateinit var binding: ActivityMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
-        setupUI()
+        ShoutOut.setDebuggable(true)
+        ShoutOut.setTag(" Logs to Look At 👀")
+
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        with(binding) {
+            setContentView(root)
+            setupUI(this)
+        }
+
     }
 
-    private fun setupUI() {
-        setSupportActionBar(toolbar as? Toolbar)
-        fab.setOnClickListener {
-            Toast.makeText(this@MainActivity, "Check your Logcat for logs", Toast.LENGTH_SHORT).show()
-            logInfo()
+    private fun setupUI(binding: ActivityMainBinding) {
+        with(binding) {
+            btn.setOnClickListener {
+                Toast.makeText(
+                    this@MainActivity,
+                    "Check your Logcat for logs",
+                    Toast.LENGTH_SHORT
+                ).show()
+                logInfo()
+            }
         }
     }
 
     private fun logInfo() {
         // Debug Logs
-        shoutOut.log("This is Debug information here in LOGCAT")
+        ShoutOut.log("This is Debug information here in LOGCAT")
         // Error Logs
-        shoutOut.withCause(RuntimeException("Hello! I am Runtime exception"))
+        ShoutOut.withCause(RuntimeException("Hello! I am Runtime exception"))
 
         // Chained for message with exception stacktrace
-        shoutOut.log(
-                "This is Debug information here that is chained for adding a message to exception stacktrace in LOGCAT")
-                .withCause(RuntimeException("Hello! I am Runtime exception"))
+        ShoutOut
+            .log(
+                "This is Debug information here that is chained for adding a " +
+                        "message to exception stacktrace in LOGCAT"
+            )
+            .withCause(RuntimeException("Hello! I am Runtime exception"))
     }
 }
