@@ -1,6 +1,13 @@
 plugins {
     id("com.android.library")
     id("org.jetbrains.kotlin.android")
+    id("org.jetbrains.dokka")
+    id("com.vanniktech.maven.publish")
+}
+
+apply {
+    from("${rootDir}/docs.gradle")
+    from("${rootDir}/jvm_compat.gradle")
 }
 
 android {
@@ -22,12 +29,5 @@ android {
                 "proguard-rules.pro"
             )
         }
-    }
-    compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
-    }
-    kotlinOptions {
-        jvmTarget = "1.8"
     }
 }

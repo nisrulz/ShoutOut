@@ -24,10 +24,11 @@ import github.nisrulz.shoutout.ShoutOut
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
 
-    private val shoutOut: ShoutOut = ShoutOut.withTag(true, ">> ShoutOut")
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        ShoutOut.setDebuggable(true)
+        ShoutOut.setTag(" Logs to Look At 👀")
+
         binding = ActivityMainBinding.inflate(layoutInflater)
         with(binding) {
             setContentView(root)
@@ -51,13 +52,16 @@ class MainActivity : AppCompatActivity() {
 
     private fun logInfo() {
         // Debug Logs
-        shoutOut.log("This is Debug information here in LOGCAT")
+        ShoutOut.log("This is Debug information here in LOGCAT")
         // Error Logs
-        shoutOut.withCause(RuntimeException("Hello! I am Runtime exception"))
+        ShoutOut.withCause(RuntimeException("Hello! I am Runtime exception"))
 
         // Chained for message with exception stacktrace
-        shoutOut.log(
-            "This is Debug information here that is chained for adding a message to exception stacktrace in LOGCAT"
-        ).withCause(RuntimeException("Hello! I am Runtime exception"))
+        ShoutOut
+            .log(
+                "This is Debug information here that is chained for adding a " +
+                        "message to exception stacktrace in LOGCAT"
+            )
+            .withCause(RuntimeException("Hello! I am Runtime exception"))
     }
 }
