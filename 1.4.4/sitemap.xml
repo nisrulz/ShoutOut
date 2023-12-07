@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+         <loc>https://nisrulz.com/ShoutOut/1.4.4/</loc>
+         <lastmod>2023-12-07</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nisrulz.com/ShoutOut/1.4.4/changelog/</loc>
+         <lastmod>2023-12-07</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nisrulz.com/ShoutOut/1.4.4/integration/</loc>
+         <lastmod>2023-12-07</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nisrulz.com/ShoutOut/1.4.4/usage/</loc>
+         <lastmod>2023-12-07</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+</urlset>

@@ -1,0 +1,10 @@
+$dokka.format:html-v1
+$dokka.linkExtension:html
+$dokka.location:github.nisrulz.shoutout////PointingToDeclaration/shoutout/github.nisrulz.shoutout/index.html
+$dokka.location:github.nisrulz.shoutout/ShoutOut///PointingToDeclaration/shoutout/github.nisrulz.shoutout/-shout-out/index.html
+$dokka.location:github.nisrulz.shoutout/ShoutOut/log/#kotlin.String/PointingToDeclaration/shoutout/github.nisrulz.shoutout/-shout-out/log.html
+$dokka.location:github.nisrulz.shoutout/ShoutOut/setDebuggable/#kotlin.Boolean/PointingToDeclaration/shoutout/github.nisrulz.shoutout/-shout-out/set-debuggable.html
+$dokka.location:github.nisrulz.shoutout/ShoutOut/setTag/#kotlin.String/PointingToDeclaration/shoutout/github.nisrulz.shoutout/-shout-out/set-tag.html
+$dokka.location:github.nisrulz.shoutout/ShoutOut/withCause/#java.lang.Exception/PointingToDeclaration/shoutout/github.nisrulz.shoutout/-shout-out/with-cause.html
+github.nisrulz.shoutout
+
